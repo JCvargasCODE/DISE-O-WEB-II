@@ -1,0 +1,214 @@
+/* ===================== RESET Y ESTILOS GENERALES ===================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #09ff05, #d9e2ec);
+  color: #222;
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+.container { max-width: 1200px; margin: 0 auto; }
+
+h1 {
+  text-align: center;
+  color: #1f618d;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #7d3c98;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+h2 {
+  color: #16a085;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+h3 {
+  margin: 1.5rem 0 1rem;
+  color: #2c3e50;
+}
+
+code {
+  background: #e0e0e0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #c0392b;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ===================== SECCIONES ===================== */
+.demo-section {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.demo-section:hover { transform: translateY(-2px); }
+
+/* ===================== BORDER BOX ===================== */
+.border-box, .radius-box, .card, .advanced-box {
+  padding: 1.5rem;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.border-box strong, .radius-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- Border Styles ---------- */
+.border-solid { border: 4px solid #1f618d; }
+.border-dashed { border: 4px dashed #27ae60; }
+.border-dotted { border: 4px dotted #c0392b; }
+.border-double { border: 6px double #8e44ad; }
+.border-groove { border: 5px groove #2c3e50; }
+.border-ridge { border: 5px ridge #16a085; }
+.border-inset { border: 5px inset #d35400; }
+.border-outset { border: 5px outset #f39c12; }
+
+/* ---------- Individual Borders ---------- */
+.border-top-only { border-top: 5px solid #1f618d; }
+.border-bottom-only { border-bottom: 5px solid #27ae60; }
+.border-left-only { border-left: 5px solid #c0392b; }
+.border-mixed { border-top: 4px solid #2980b9; border-bottom: 4px solid #e74c3c; }
+
+/* ---------- Border-Radius ---------- */
+.radius-box {
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  color: white;
+  border: 3px solid white;
+}
+
+.radius-small { border-radius: 8px; }
+.radius-medium { border-radius: 20px; }
+.radius-large { border-radius: 35px; }
+.radius-pill { border-radius: 50px; }
+
+/* ---------- Formas ---------- */
+.shape {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  border: 4px solid #1f618d;
+}
+
+.circle { border-radius: 50%; }
+.rounded-square { border-radius: 25px; }
+.top-rounded { border-radius: 50% 50% 0 0; }
+.leaf { border-radius: 20% 80% 20% 80%; }
+
+/* ---------- Botones ---------- */
+.buttons-demo {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-filled {
+  background: #16a085;
+  color: white;
+  border: 2px solid #16a085;
+}
+
+.btn-filled:hover {
+  background: #138d75;
+  border-color: #138d75;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #8e44ad;
+  border: 2px solid #8e44ad;
+}
+
+.btn-outline:hover {
+  background: #8e44ad;
+  color: white;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #c0392b;
+  border: 2px solid transparent;
+}
+
+.btn-ghost:hover { border-color: #c0392b; }
+
+/* ---------- Cards ---------- */
+.card-simple { border: 2px solid #bdc3c7; border-radius: 10px; }
+.card-thick { border: 5px solid #1f618d; border-radius: 12px; }
+.card-accent { border-left: 6px solid #27ae60; border-radius: 6px; }
+.card-dashed { border: 3px dashed #8e44ad; border-radius: 15px; }
+
+/* ---------- Avatares ---------- */
+.avatar {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: 4px solid #16a085;
+}
+
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-circle { border-radius: 50%; }
+.avatar-rounded { border-radius: 20px; }
+.avatar-square { border-radius: 0; }
+
+/* ---------- Efectos Avanzados ---------- */
+.gradient-border {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #16a085, #27ae60) border-box;
+  border: 4px solid transparent;
+}
+
+.glow-border {
+  border: 2px solid #2980b9;
+  box-shadow: 0 0 25px rgba(41,128,185,0.5);
+}
+
+.animated-border {
+  border: 3px solid #8e44ad;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.animated-border:hover { border-color: #c0392b; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr !important; }
+  .buttons-demo { flex-direction: column; }
+  .btn { width: 100%; }
+}

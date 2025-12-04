@@ -1,0 +1,191 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: #00e5ff;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 8px #00e5ff;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b0bec5;
+    margin-bottom: 3rem;
+}
+
+/* ================= DEMO SECTIONS ================= */
+.demo-section {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+}
+
+/* ---------- Sección 1: Neon Boxes ---------- */
+.section1 {
+    background: #1a1a1a;
+}
+.neon-box {
+    background: #222;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.neon-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff;
+}
+
+/* ---------- Sección 2: Skewed Boxes ---------- */
+.section2 {
+    background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
+}
+.skewed-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.skewed-box {
+    background: #3a3a3a;
+    padding: 2rem;
+    transform: skewY(-5deg);
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+.skewed-box:hover {
+    transform: skewY(0deg);
+    background: #505050;
+}
+
+/* ---------- Sección 3: Buttons ---------- */
+.section3 {
+    background: #111;
+    text-align: center;
+}
+.btn-glow {
+    background: #ff3d00;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 0 10px #ff3d00, 0 0 20px #ff3d00;
+    transition: all 0.3s ease;
+    margin: 0 10px 10px 0;
+}
+.btn-glow:hover {
+    box-shadow: 0 0 20px #ff3d00, 0 0 40px #ff3d00;
+    transform: scale(1.1);
+}
+
+/* ---------- Sección 4: Cards ---------- */
+.section4 {
+    background: #1b1b1b;
+}
+.cards-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+.card-gradient {
+    background: linear-gradient(135deg, #4a148c, #6a1b9a);
+    border-radius: 16px;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card-gradient:hover {
+    transform: translateY(-8px) rotate(-2deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.card h4 {
+    color: #fff;
+}
+
+/* ---------- Sección 5: Inputs ---------- */
+.section5 {
+    background: #111;
+}
+.inputs-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.input {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    transition: all 0.3s;
+}
+.input:focus {
+    outline: none;
+    border-color: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+/* ---------- Sección 6: Inline vs Block ---------- */
+.section6 {
+    background: #1a1a1a;
+    padding: 2rem;
+}
+.inline-padded {
+    padding: 8px 16px;
+    background: #ff3d00;
+    color: white;
+    border-radius: 8px;
+}
+.inline-block-padded {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #00e5ff;
+    color: #000;
+    border-radius: 12px;
+}
+.block-padded {
+    display: block;
+    padding: 24px;
+    background: #b388ff;
+    border-radius: 16px;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ================= PADDING CLASSES ================= */
+.padding-none { padding: 0; }
+.padding-small { padding: 12px; }
+.padding-medium { padding: 24px; }
+.padding-large { padding: 48px; }
+.padding-vertical { padding: 35px 15px; }
+.padding-horizontal { padding: 15px 50px; }
+.padding-custom { padding: 15px 25px 35px 45px; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .examples-grid, .cards-demo, .skewed-grid { grid-template-columns: 1fr; }
+    .buttons-demo { flex-direction: column; }
+    .btn-glow { width: 100%; margin-bottom: 10px; }
+}

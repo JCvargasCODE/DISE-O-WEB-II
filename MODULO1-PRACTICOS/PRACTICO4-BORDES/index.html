@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bordes y Border-Radius | Box Model</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bordes y Border-Radius</h1>
+      <p class="subtitle">Juan Carlos Vargas Avendaño</p>
+    </header>
+
+    <!-- Sección 1: Estilos de Border -->
+    <section class="demo-section">
+      <h2>1. Estilos de Border</h2>
+      <div class="grid border-styles-grid">
+        <div class="border-box border-solid">
+          <strong>Solid</strong>
+          <p>border: 4px solid #1f618d;</p>
+        </div>
+        <div class="border-box border-dashed">
+          <strong>Dashed</strong>
+          <p>border: 4px dashed #27ae60;</p>
+        </div>
+        <div class="border-box border-dotted">
+          <strong>Dotted</strong>
+          <p>border: 4px dotted #c0392b;</p>
+        </div>
+        <div class="border-box border-double">
+          <strong>Double</strong>
+          <p>border: 6px double #8e44ad;</p>
+        </div>
+        <div class="border-box border-groove">
+          <strong>Groove</strong>
+          <p>border: 5px groove #2c3e50;</p>
+        </div>
+        <div class="border-box border-ridge">
+          <strong>Ridge</strong>
+          <p>border: 5px ridge #16a085;</p>
+        </div>
+        <div class="border-box border-inset">
+          <strong>Inset</strong>
+          <p>border: 5px inset #d35400;</p>
+        </div>
+        <div class="border-box border-outset">
+          <strong>Outset</strong>
+          <p>border: 5px outset #f39c12;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Bordes Individuales -->
+    <section class="demo-section">
+      <h2>2. Bordes Individuales</h2>
+      <div class="grid individual-borders-grid">
+        <div class="border-box border-top-only">
+          <strong>Solo Arriba</strong>
+          <p>border-top: 5px solid #1f618d;</p>
+        </div>
+        <div class="border-box border-bottom-only">
+          <strong>Solo Abajo</strong>
+          <p>border-bottom: 5px solid #27ae60;</p>
+        </div>
+        <div class="border-box border-left-only">
+          <strong>Solo Izquierda</strong>
+          <p>border-left: 5px solid #c0392b;</p>
+        </div>
+        <div class="border-box border-mixed">
+          <strong>Múltiples Lados</strong>
+          <p>border-top: 4px solid #2980b9;</p>
+          <p>border-bottom: 4px solid #e74c3c;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Border-Radius -->
+    <section class="demo-section">
+      <h2>3. Border-Radius</h2>
+      <div class="grid radius-grid">
+        <div class="radius-box radius-small">
+          <strong>Pequeño</strong>
+          <p>border-radius: 8px;</p>
+        </div>
+        <div class="radius-box radius-medium">
+          <strong>Mediano</strong>
+          <p>border-radius: 20px;</p>
+        </div>
+        <div class="radius-box radius-large">
+          <strong>Grande</strong>
+          <p>border-radius: 35px;</p>
+        </div>
+        <div class="radius-box radius-pill">
+          <strong>Pill</strong>
+          <p>border-radius: 50px;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Formas -->
+    <section class="demo-section">
+      <h2>4. Creando Formas</h2>
+      <div class="grid shapes-grid">
+        <div class="shape-container">
+          <div class="shape circle"></div>
+          <p><strong>Círculo</strong></p>
+          <code>border-radius: 50%</code>
+        </div>
+        <div class="shape-container">
+          <div class="shape rounded-square"></div>
+          <p><strong>Cuadrado Redondeado</strong></p>
+          <code>border-radius: 25px</code>
+        </div>
+        <div class="shape-container">
+          <div class="shape top-rounded"></div>
+          <p><strong>Top Redondeado</strong></p>
+          <code>border-radius: 50% 50% 0 0</code>
+        </div>
+        <div class="shape-container">
+          <div class="shape leaf"></div>
+          <p><strong>Hoja</strong></p>
+          <code>border-radius: 20% 80% 20% 80%</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 5: Botones -->
+    <section class="demo-section">
+      <h2>5. Botones</h2>
+      <div class="buttons-demo">
+        <button class="btn btn-filled">Filled</button>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-ghost">Ghost</button>
+      </div>
+      <div class="buttons-demo">
+        <button class="btn btn-border-grow">Grow</button>
+        <button class="btn btn-border-spin">Spin</button>
+        <button class="btn btn-slide-border">Slide</button>
+      </div>
+    </section>
+
+    <!-- Sección 6: Cards -->
+    <section class="demo-section">
+      <h2>6. Cards</h2>
+      <div class="grid cards-grid">
+        <div class="card card-simple">
+          <h3>Simple</h3>
+          <p>border: 2px solid #bdc3c7;</p>
+        </div>
+        <div class="card card-thick">
+          <h3>Gruesa</h3>
+          <p>border: 5px solid #1f618d;</p>
+        </div>
+        <div class="card card-accent">
+          <h3>Acento</h3>
+          <p>border-left: 6px solid #27ae60;</p>
+        </div>
+        <div class="card card-dashed">
+          <h3>Punteada</h3>
+          <p>border: 3px dashed #8e44ad;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 7: Avatares -->
+    <section class="demo-section">
+      <h2>7. Avatares</h2>
+      <div class="avatars-demo">
+        <div class="avatar-container">
+          <div class="avatar avatar-circle"><img src="image.png" alt="Avatar"></div>
+          <p>Circular</p>
+        </div>
+        <div class="avatar-container">
+          <div class="avatar avatar-rounded"><img src="1.jpg" alt="Avatar"></div>
+          <p>Redondeado</p>
+        </div>
+        <div class="avatar-container">
+          <div class="avatar avatar-square"><img src="2.jpg" alt="Avatar"></div>
+          <p>Cuadrado</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 8: Bordes Avanzados -->
+    <section class="demo-section">
+      <h2>8. Efectos Avanzados</h2>
+      <div class="grid advanced-grid">
+        <div class="advanced-box gradient-border">
+          <p><strong>Gradiente</strong></p>
+        </div>
+        <div class="advanced-box glow-border">
+          <p><strong>Glow</strong></p>
+        </div>
+        <div class="advanced-box animated-border">
+          <p><strong>Animado</strong></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

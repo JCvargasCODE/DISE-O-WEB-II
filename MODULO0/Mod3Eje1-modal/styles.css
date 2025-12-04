@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-image: url("codigo.gif"); 
+    background-size: cover;            
+    background-position: center;       
+    background-repeat: no-repeat;      
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Contenedor */
+.container {
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Botón para abrir */
+.btn-open {
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #1e88e5;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-open:hover {
+    background: #42a5f5;
+}
+
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+}
+
+/* Activar modal */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal */
+.modal {
+    background: #03010a;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    color: #484747; 
+    text-align: center;
+    position: relative;
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Botón cerrar */
+.btn-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Imagen / icono */
+.modal-icon {
+    margin-bottom: 15px;
+}
+
+/* Botón del modal */
+.btn-modal-action {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #137177;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-modal-action:hover {
+    background: #0a2a43;
+}

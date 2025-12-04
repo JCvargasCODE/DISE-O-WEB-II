@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Personalizado | Juan Carlos Vargas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>MODAL - Juan Carlos Vargas</h1>
+        <p>Haz clic en el botón para abrir mi ventana MODAL personalizada.</p>
+        <button class="btn-open">Abrir Ventana</button>
+    </div>
+
+    <!-- Modal / Segunda ventana -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+
+            <!-- Botón cerrar -->
+            <button class="btn-close" aria-label="Cerrar modal">&times;</button>
+
+            <!-- Aquí puedes cambiar la imagen -->
+            <div class="modal-icon">
+                <img src="image.png" alt="Imagen del modal" width="120" style="border-radius: 15px;">
+            </div>
+
+            <h2>¡Hola, Soy Juan Carlos!</h2>
+            <p>Esta es mi ventana personalizada diseñada con HTML, CSS y JavaScript.</p>
+            <p>Puedo cambiar textos, imágenes y colores cuando quiera.</p>
+
+            <button class="btn-modal-action">ENTENDIDO</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
