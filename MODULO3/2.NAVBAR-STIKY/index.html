@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Navbar sticky y componentes UI.">
+    <title>Juan Carlos Vargas Avendaño — StickyNav Tech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación Sticky -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🛠️</span>
+                <span class="logo-text">JUAN VARGAS</span>
+                <small style="margin-left:10px; font-size:0.8rem; color:var(--color-text-light);">StickyNav</small>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#features" class="nav-link">Servicios</a></li>
+                <li><a href="#pricing" class="nav-link">Planes</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link btn-cta">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>JUAN CARLOS<br><span style="font-size:0.55em; color:var(--color-text-light); text-transform:none;">Ingeniería de Software · Infra · DevOps</span></h1>
+            <p class="subtitle">Demo técnica con navbar <strong>sticky</strong>, visualización para portafolio.</p>
+            <div class="scroll-indicator">
+                <p>Scroll Down ↓</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Servicios -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2>🔧 Servicios técnicos</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">⚙️</div>
+                    <h3>Infraestructura como Código</h3>
+                    <p>Provisionamiento reproducible (Terraform / Ansible) y despliegues automatizados.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚀</div>
+                    <h3>CI / CD</h3>
+                    <p>Canales de integración y entrega continua para acelerar releases con seguridad.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>Seguridad y Monitoreo</h3>
+                    <p>Hardening, alertas y observabilidad (logs, métricas, trazas).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📈</div>
+                    <h3>Optimización de Rendimiento</h3>
+                    <p>Profiling, caching y tuning para sistemas productivos a escala.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section (renombrado a Planes Técnicos) -->
+    <section id="pricing" class="section section-alt">
+        <div class="container">
+            <h2>💼 Planes técnicos</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <p class="price">Bs 120<span>/mes</span></p>
+                    <ul>
+                        <li>✔️ Soporte básico 10h/mes</li>
+                        <li>✔️ 1 pipeline CI/CD</li>
+                        <li>✔️ Backups semanales</li>
+                    </ul>
+                    <button>Elegir Starter</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge">Recomendado</div>
+                    <h3>Engineer</h3>
+                    <p class="price">Bs 450<span>/mes</span></p>
+                    <ul>
+                        <li>✔️ Soporte 40h/mes</li>
+                        <li>✔️ Integración completa (CI + CD)</li>
+                        <li>✔️ Monitorización y alertas</li>
+                    </ul>
+                    <button>Elegir Engineer</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="price">Bs 1200<span>/mes</span></p>
+                    <ul>
+                        <li>✔️ Soporte 24/7</li>
+                        <li>✔️ Arquitectura dedicada</li>
+                        <li>✔️ SLA y auditorías</li>
+                    </ul>
+                    <button>Contactar Enterprise</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Proyectos -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h2>📁 Proyectos destacados</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🧩</div>
+                    <h3>Plataforma de e-commerce (Escalable)</h3>
+                    <p>Microservicios, contenedores y despliegue multi-región.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Sistema de monitoreo central</h3>
+                    <p>SIEM + Prometheus + Grafana para métricas y alertas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Portal web institucional</h3>
+                    <p>React + API REST + pruebas automatizadas CI.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔁</div>
+                    <h3>Automatización de despliegues</h3>
+                    <p>Workflows reproducibles con pipelines y tests integrados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (puede servir como referencias) -->
+    <section id="testimonios" class="section section-alt">
+        <div class="container">
+            <h2>💬 Referencias</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="quote">"Entrega puntual, infra estable y documentación clara. Recomendado."</p>
+                    <p class="author">- Laura Méndez, CTO</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"Automatizó nuestros despliegues y redujo fallos en producción."</p>
+                    <p class="author">- Andrés R., Product Owner</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2>📧 Contacto</h2>
+            <p>¿Interesado en colaborar? Escribe un mensaje y te respondo.</p>
+            <form class="contact-form" onsubmit="event.preventDefault(); window.location='#inicio';">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensaje (breve)" rows="5" required></textarea>
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Juan Carlos Vargas Avendaño — StickyNav Tech. Diseño y demos técnicas.</p>
+        </div>
+    </footer>
+
+    <!-- Botón "Volver Arriba" (Position: Fixed) -->
+    <button class="btn-top" id="btnTop" title="Volver arriba">
+        ↑
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

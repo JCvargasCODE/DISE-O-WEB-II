@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMG REPONSIVE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🧢 Galería de Gorras</h1>
+        <p>Explora modelos de gorras deportivas, urbanas y personalizadas.</p>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <h2>1. Gorras Responsive (Diferentes Tamaños)</h2>
+            <p>Las imágenes se adaptan automáticamente según el tamaño de la pantalla.</p>
+            
+            <img 
+                src="https://catlifestyle.com.bo/wp-content/uploads/2025/05/4090220_18-0515_Dusty-Olive_01_LF.jpg" 
+                srcset="
+                    https://static.caphunters.lt/13507-large_default/gorra-plana-negra-ajustada-59fifty-essential-de-new-york-yankees-mlb-de-new-era.webp
+                sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
+                alt="Gorra responsive"
+                loading="lazy"
+                class="responsive-img"
+            >
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. Estilos de Gorras (Picture)</h2>
+            <p>Diseños diferentes para móvil, tablet y escritorio.</p>
+            
+            <picture>
+                <source 
+                    media="(min-width: 1024px)" 
+                    srcset="https://m.media-amazon.com/images/I/71XR2KOjEwL._AC_UY1000_.jpg"
+                >
+                <source 
+                    media="(min-width: 768px)" 
+                    srcset="https://acdn-us.mitiendanube.com/stores/005/556/180/products/deportiva-celeste-2-aac5fb4aaf7a410bdf17456060884846-1024-1024.webp"
+                >
+                <img 
+                    src="https://static.caphunters.lt/13507-large_default/gorra-plana-negra-ajustada-59fifty-essential-de-new-york-yankees-mlb-de-new-era.webp" 
+                    alt="Estilo de gorra"
+                    loading="lazy"
+                    class="responsive-img"
+                >
+            </picture>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>3. Fondo con Gorras (Background)</h2>
+            <p>El fondo de esta sección se adapta según el tamaño de la pantalla.</p>
+            <div class="hero-background">
+                <h3>Estilos exclusivos de gorras</h3>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🧢 Colección 2025 - Gorras Urbanas</p>
+    </footer>
+
+</body>
+</html>

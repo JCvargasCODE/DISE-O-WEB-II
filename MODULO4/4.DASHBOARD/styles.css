@@ -1,0 +1,250 @@
+/* =====================================
+   RESET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #cbd5e1;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+.sidebar {
+    width: 220px;
+    background-color: #1f1f1f;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.sidebar-header h2 {
+    color: #22c55e; /* Verde llamativo */
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 0.5rem;
+    margin-bottom: 0.3rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: #22c55e; /* Verde llamativo */
+    color: #ffffff;
+}
+
+.nav-icon {
+    margin-right: 0.5rem;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+.header {
+    margin-left: 220px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+}
+
+.header-search input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    background-color: #2a2a2a;
+    color: #cbd5e1;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    position: relative;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #16a34a; /* Verde */
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0 4px;
+    border-radius: 50%;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-profile img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+.main-content {
+    margin-left: 220px;
+    padding: 1rem 2rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.page-header h1 {
+    color: #22c55e; /* Verde llamativo */
+}
+
+.btn-primary {
+    background-color: #22c55e;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* =====================================
+   STATS CARDS
+===================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #1f1f1f;
+    color: #cbd5e1;
+}
+
+.stat-icon {
+    font-size: 2rem;
+}
+
+.stat-info h3 {
+    color: #22c55e; /* Verde llamativo */
+}
+
+.stat-change.positive {
+    color: #4ade80;
+}
+
+.stat-change.negative {
+    color: #f87171;
+}
+
+/* =====================================
+   CARDS / TABLES / CHARTS
+===================================== */
+.card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: #22c55e; /* Verde llamativo */
+    margin-bottom: 0.5rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.data-table th {
+    color: #22c55e;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 150px;
+    gap: 0.5rem;
+}
+
+.bar-chart .bar {
+    width: 14%;
+    background-color: #22c55e; /* Verde llamativo */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+/* =====================================
+   ACTIVITY LIST
+===================================== */
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-icon {
+    font-size: 1.5rem;
+    color: #22c55e; /* Verde llamativo */
+}

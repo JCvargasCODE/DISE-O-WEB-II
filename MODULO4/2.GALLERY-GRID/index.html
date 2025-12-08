@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Motocross Racing JUAN CARLOS</h1>
+            <p class="subtitle">Galería de motos extremas, saltos, barro y velocidad pura</p>
+        </header>
+
+        <!-- Gallery Grid -->
+        <section class="gallery">
+
+            <div class="gallery-item">
+                <img src="https://www.shutterstock.com/image-photo/latvia-kegums-07062025-mxgp-image-600nw-2645039595.jpg" alt="Motocross jump">
+                <div class="overlay">
+                    <h3>Salto Extremo</h3>
+                    <p>Vuelo total sobre rampas</p>
+                </div>
+            </div>
+
+            <div class="gallery-item featured">
+                <img src="https://cdn-0.motocrossactionmag.com/wp-content/uploads/2023/09/mud-2.jpg" alt="Motocross mud race">
+                <div class="overlay">
+                    <h3>Carrera en Barro</h3>
+                    <p>Adrenalina sobre terreno difícil</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://cdn.displate.com/artwork/270x380/2024-10-03/945a396d-7a10-4bd6-8288-afd945c386ff.jpg" alt="Motocross rider">
+                <div class="overlay">
+                    <h3>Piloto en Acción</h3>
+                    <p>Control total en curva</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://cdn.shopify.com/s/files/1/2301/5125/files/ariel-shot-of-a-mx-track-by-mx-track-builders.jpg?v=1614295083" alt="Motocross track">
+                <div class="overlay">
+                    <h3>Pista Profesional</h3>
+                    <p>Circuitos de competición</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://www.raceleathers.co.uk/image/cache/catalog/Blog%20Images/Can%20You%20Wear%20a%20Motocross%20Helmet%20on%20the%20Street-1920x1080.jpg" alt="Motocross helmet">
+                <div class="overlay">
+                    <h3>Equipo Pro</h3>
+                    <p>Cascos y protección extrema</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://rxi.iscdn.net/2021/11/236037_start_-_redbud_-_mx21_-_mk_img_6021.jpg" alt="Motocross bike">
+                <div class="overlay">
+                    <h3>MTX 450R</h3>
+                    <p>Máquina lista para competir</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Maikel_Melero_-_Exhibici%C3%B3n_Freestyle_GP_Cami%C3%B3n_de_Espa%C3%B1a_2013_-_01.jpg" alt="Motocross race action">
+                <div class="overlay">
+                    <h3>Salida Explosiva</h3>
+                    <p>Aceleración desde la línea</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://www.mxgp.com/sites/default/files/news/image/MXGP_14_FLA_2024_MXGP_0743.jpg" alt="Motocross freestyle">
+                <div class="overlay">
+                    <h3>Freestyle MX</h3>
+                    <p>Trucos aéreos extremos</p>
+                </div>
+            </div>
+
+            <div class="gallery-item featured">
+                <img src="https://monster-experience.com/wp-content/uploads/2024/12/KTM-_DIRT-BIKE-DUBAI-1-4.jpg" alt="Motocross competition">
+                <div class="overlay">
+                    <h3>Competencia Final</h3>
+                    <p>Batalla por el campeonato</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://riskracing.com/cdn/shop/articles/2020-Pro-Motocross-Broadcast-Schedule-2_1000x.jpg?v=1641920179" alt="Motocross dirt bike">
+                <div class="overlay">
+                    <h3>Dirt Bike Pro</h3>
+                    <p>Potencia y resistencia</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/1280x1280/products/162072/503092/223287-1024__55914.1664266118.jpg?c=2" alt="Motocross cornering">
+                <div class="overlay">
+                    <h3>Curvas Técnicas</h3>
+                    <p>Control total del derrape</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://static.posters.cz/image/750/posters/motocross-rider-performing-high-jump-at-sunset-i186798.jpg" alt="Motocross sunset">
+                <div class="overlay">
+                    <h3>Atardecer MX</h3>
+                    <p>Entrenamientos al máximo nivel</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Explicación del Grid (misma estructura) -->
+        <section class="explanation">
+            <h2>🏁 Cómo Funciona Este Grid de Competencia</h2>
+            <div class="code-example">
+                <h3>CSS Grid para Galería MX</h3>
+                <pre><code>.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ⭐ auto-fit: Ajusta las columnas automáticamente
+   ⭐ minmax(): Controla el tamaño de cada tarjeta
+   ⭐ Resultado: Galería responsive para motos */</code></pre>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <h4>🏍️ Diseño Dinámico</h4>
+                    <p>Organiza motos, saltos y pilotos automáticamente</p>
+                </div>
+                <div class="feature">
+                    <h4>⚡ Carga Rápida</h4>
+                    <p>Optimizado para galerías de alta velocidad</p>
+                </div>
+                <div class="feature">
+                    <h4>🔥 Estilo Racing</h4>
+                    <p>Perfecto para contenido deportivo extremo</p>
+                </div>
+                <div class="feature">
+                    <h4>📱 100% Responsive</h4>
+                    <p>Se adapta a cualquier dispositivo automáticamente</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

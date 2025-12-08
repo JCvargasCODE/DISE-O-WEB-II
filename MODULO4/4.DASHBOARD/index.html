@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2> Juan Carlos MotoStore</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">🏠</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📊</span>
+                    <span>Ventas</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🛵</span>
+                    <span>Motos</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">👥</span>
+                    <span>Clientes</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-search">
+                <input type="search" placeholder="Buscar motos, clientes...">
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn">🔔<span class="badge">2</span></button>
+                <button class="icon-btn">✉️<span class="badge">4</span></button>
+                <div class="user-profile">
+                    <img src="WhatsApp Image 2025-12-01 at 9.30.46 AM.jpeg" alt="Usuario">
+                    <span>Juan Carlos</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Dashboard</h1>
+                <button class="btn-primary">+ Agregar Moto</button>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card stat-blue">
+                    <div class="stat-icon">🛵</div>
+                    <div class="stat-info">
+                        <h3>120</h3>
+                        <p>Motos en Stock</p>
+                        <span class="stat-change positive">+10%</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-green">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3>$35,400</h3>
+                        <p>Ingresos del Mes</p>
+                        <span class="stat-change positive">+8%</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-orange">
+                    <div class="stat-icon">📦</div>
+                    <div class="stat-info">
+                        <h3>25</h3>
+                        <p>Motos Vendidas</p>
+                        <span class="stat-change negative">-2%</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-purple">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <h3>4.9</h3>
+                        <p>Satisfacción Clientes</p>
+                        <span class="stat-change positive">+0.5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts and Tables -->
+            <div class="content-grid">
+                <!-- Recent Activity -->
+                <div class="card">
+                    <h3>Actividad Reciente</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">🛵</div>
+                            <div class="activity-content">
+                                <p><strong>Nueva moto agregada</strong></p>
+                                <span>Hace 10 minutos</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">💰</div>
+                            <div class="activity-content">
+                                <p><strong>Venta completada: $2,400</strong></p>
+                                <span>Hace 30 minutos</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">👥</div>
+                            <div class="activity-content">
+                                <p><strong>Cliente registrado</strong></p>
+                                <span>Hace 1 hora</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Products -->
+                <div class="card">
+                    <h3>Motos Populares</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Moto</th>
+                                <th>Ventas</th>
+                                <th>Ingresos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>KTM 450 SX</td>
+                                <td>12</td>
+                                <td>$18,000</td>
+                            </tr>
+                            <tr>
+                                <td>Yamaha YZ250F</td>
+                                <td>9</td>
+                                <td>$14,500</td>
+                            </tr>
+                            <tr>
+                                <td>Honda CRF450</td>
+                                <td>7</td>
+                                <td>$11,200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Sales Chart -->
+                <div class="card card-full">
+                    <h3>Ventas Mensuales</h3>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 50%"><span>Ene</span></div>
+                            <div class="bar" style="height: 70%"><span>Feb</span></div>
+                            <div class="bar" style="height: 60%"><span>Mar</span></div>
+                            <div class="bar" style="height: 80%"><span>Abr</span></div>
+                            <div class="bar" style="height: 75%"><span>May</span></div>
+                            <div class="bar" style="height: 90%"><span>Jun</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

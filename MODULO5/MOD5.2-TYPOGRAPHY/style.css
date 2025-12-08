@@ -1,0 +1,130 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --rojo: #ff1a1a;
+    --rojo-suave: #ff6b6b;
+    --fondo: #0a0000;
+    --fondo-secundario: #000000;
+    --texto: #ffe5e5;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #1a0000, #000000);
+    color: var(--texto);
+    padding: 2rem 1rem;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(10, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.15);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--rojo);
+    text-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+.subtitle {
+    color: var(--rojo-suave);
+    margin-top: 0.5rem;
+}
+
+/* =========================
+   LÍNEA DIVISORA
+========================= */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--rojo), transparent);
+    margin: 2rem 0;
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+article h2 {
+    color: var(--rojo);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+article h3 {
+    color: #ff4d4d;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+article h4 {
+    color: #ff9999;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+article p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #f2cccc;
+}
+
+/* =========================
+   CITAS
+========================= */
+blockquote {
+    margin: 1.5rem 0;
+    padding: 1.2rem;
+    background: #140000;
+    border-left: 5px solid var(--rojo);
+    color: #ffb3b3;
+    font-style: italic;
+    border-radius: 8px;
+}
+
+/* =========================
+   EFECTOS
+========================= */
+h1, h2, h3, h4 {
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.2rem;
+    }
+
+    article h2 {
+        font-size: 1.5rem;
+    }
+}

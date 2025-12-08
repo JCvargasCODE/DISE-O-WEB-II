@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
+}
+
+/* =====================================
+   HERO
+===================================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Fondo degradado dinámico */
+    background: linear-gradient(120deg, #4b00ff, #ff0077, #00d4ff);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* Animación colores dinámicos */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =====================================
+   OVERLAY
+===================================== */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+/* =====================================
+   GIF ANIMADO
+===================================== */
+.hero-gif {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 0;
+    filter: saturate(160%);
+}
+
+/* =====================================
+   REDES SOCIALES
+===================================== */
+.social-links {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-links a {
+    background: rgba(255, 255, 255, 0.15);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: white;
+    transition: 0.3s;
+    backdrop-filter: blur(8px);
+}
+
+.social-links a:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* =====================================
+   CONTENIDO
+===================================== */
+.hero-content {
+    z-index: 10;
+    text-align: center;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.4rem 1.4rem;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.25);
+    color: white;
+    backdrop-filter: blur(8px);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0px 0px 20px black;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: rgba(255,255,255,0.9);
+}
+
+/* =====================================
+   BOTONES
+===================================== */
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 1rem 2.2rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: white;
+    color: #5b00ff;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px white;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #5b00ff;
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   SCROLL INDICATOR
+===================================== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 1.5rem;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    z-index: 20;
+    animation: fadeIn 2.5s ease;
+}
+
+.scroll-arrow {
+    font-size: 2rem;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+/* =====================================
+   SECTION EXTRA
+===================================== */
+.content-section {
+    padding: 5rem 2rem;
+    text-align: center;
+}

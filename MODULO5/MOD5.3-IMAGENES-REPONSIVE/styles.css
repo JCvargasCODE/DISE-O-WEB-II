@@ -1,0 +1,148 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   COLORES BASE
+========================= */
+:root {
+    --rojo: #e10600;
+    --rojo-suave: #ff4d4d;
+    --fondo: #0a0a0a;
+    --fondo-sec: #111111;
+    --texto: #f2f2f2;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #080000, #000000);
+    color: var(--texto);
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #000;
+    border-bottom: 2px solid var(--rojo);
+}
+
+header h1 {
+    color: var(--rojo);
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-shadow: 0 0 15px rgba(225, 6, 0, 0.5);
+}
+
+header p {
+    color: #ddd;
+    margin-top: 0.5rem;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    color: var(--rojo-suave);
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* =========================
+   IMÁGENES
+========================= */
+.responsive-img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    border: 2px solid var(--rojo);
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.3);
+    display: block;
+    margin: auto;
+}
+
+/* =========================
+   HERO BACKGROUND
+========================= */
+.hero-background {
+    height: 260px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("https://images.unsplash.com/photo-1605106702734-205df224ecce");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid var(--rojo);
+    box-shadow: 0 0 20px rgba(225, 6, 0, 0.4);
+}
+
+.hero-background h3 {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* =========================
+   HR
+========================= */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--rojo), transparent);
+    margin: 3rem 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #000;
+    color: #777;
+    border-top: 2px solid var(--rojo);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .hero-background {
+        height: 200px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

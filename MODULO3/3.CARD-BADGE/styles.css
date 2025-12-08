@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0f1c;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Títulos */
+h1 {
+    color: #4da3ff;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 2.7rem;
+    text-shadow: 0 0 15px rgba(0, 153, 255, 0.4);
+}
+
+.subtitle {
+    color: #b8cfff;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.15rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* CARD */
+.card {
+    position: relative;
+    background: #111829;
+    border: 1px solid #1e2a44;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 153, 255, 0.2);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 153, 255, 0.35);
+}
+
+/* BADGE */
+.badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    padding: 0.45rem 1rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Badges estilos */
+.badge-new {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+}
+
+.badge-hot {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
+
+.badge-premium {
+    background: #1f2a40;
+    border: 2px solid #ffd700;
+    color: #ffd700;
+}
+
+/* Imagen */
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+/* Contenido */
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: #4da3ff;
+    margin-bottom: 0.7rem;
+}
+
+.card-content p {
+    color: #b8cfff;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #22304c;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4da3ff;
+}
+
+/* Botón */
+.btn {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #2b8cff;
+    transform: translateY(-2px);
+}
