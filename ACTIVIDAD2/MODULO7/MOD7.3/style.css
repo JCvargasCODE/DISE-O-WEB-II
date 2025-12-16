@@ -1,0 +1,66 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000; /* (CAMBIO PERSONAL) */
+    font-family: sans-serif;
+    padding: 25px;        /* (CAMBIO PERSONAL) */
+}
+
+/* ============================
+   GRID PRINCIPAL (MASONRY)
+   ============================ */
+.gallery-grid {
+    display: grid;
+
+    /* Min 260px por tarjeta (CAMBIO PERSONAL) */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
+    /* Filas pequeñas: clave del Masonry */
+    grid-auto-rows: 10px;
+
+    /* Relleno inteligente */
+    grid-auto-flow: dense;
+
+    gap: 18px; /* (CAMBIO PERSONAL) */
+}
+
+/* ============================
+   TARJETAS
+   ============================ */
+.card {
+    background: white;
+    border-radius: 14px; /* (CAMBIO PERSONAL) */
+    overflow: hidden;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.12);
+    grid-row: span 26;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card-tall { grid-row: span 42; }
+.card-wide { grid-column: span 2; grid-row: span 26; }
+.card-big  { grid-column: span 2; grid-row: span 42; }
+
+/* Imagen */
+figure {
+    flex-grow: 1;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido interno */
+.card-content {
+    padding: 16px;
+}

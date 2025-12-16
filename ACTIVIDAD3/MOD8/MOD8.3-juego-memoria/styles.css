@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url("https://wallpapers.com/images/featured/fondos-de-paisajes-naturales-k9tfch0hpfjbaxel.jpg"); /* tu imagen */
+  background-size: cover;        /* 🔥 la hace grande */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.board {
+  width: 420px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px auto;
+}
+
+.card {
+  width: 90px;
+  height: 90px;
+  background: #000000;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  transition: transform 0.4s;
+}
+
+.card.revealed {
+  background: #666666;
+  transform: rotateY(0deg);
+}
+
+.card.matched {
+  background: #e38585;
+  cursor: default;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  background: #f30909;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}

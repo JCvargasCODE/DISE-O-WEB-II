@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light"> <!-- Tema por defecto: claro -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Switcher</title>
+    <!-- Importamos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Contenedor del interruptor de tema -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <!-- Checkbox que activa el modo oscuro -->
+            <input type="checkbox" id="checkbox" />
+            <!-- Slider visual del switch -->
+            <div class="slider round"></div>
+        </label>
+        <span>CAMBIAR MODO</span>
+    </div>
+
+    <!-- Tarjeta del perfil -->
+    <div class="card">
+        <div class="avatar-container">
+            <!-- Imagen del usuario -->
+            <img src="https://us.123rf.com/450wm/salamatik/salamatik1801/salamatik180100006/92710655-perfil-icono-de-cara-an%C3%B3nima-persona-silueta-gris-avatar-de-avatar-de-perfil-de-hombre-de-negocios.jpg?ver=6" alt="Jane Doe" class="avatar">
+        </div>
+        <h2>JUAN CARLOS VARGAS</h2>
+        <p class="role">Ingeniero de Sistemas</p>
+        <p class="desc"> Estudiante de la universidad UPDS .</p>
+        
+        <div class="buttons">
+            <button class="btn btn-outline">SALUDAR</button>
+            <button class="btn btn-outline">BORRAR</button>
+        </div>
+    </div>
+
+    <!-- Archivo JS -->
+    <script src="app.js"></script>
+</body>
+</html>
