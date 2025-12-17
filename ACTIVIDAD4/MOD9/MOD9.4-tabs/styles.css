@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f10e0e 0%, #000000 100%);
     min-height: 100vh;
     padding: 2rem;
 }
@@ -17,21 +17,21 @@ body {
 }
 
 .tabs-container {
-    background: white;
+    background: rgba(223, 114, 197, 0.47);
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-    color: #333;
+    color: #430fff;
     text-align: center;
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
     text-align: center;
-    color: #666;
+    color: #000000;
     margin-bottom: 2rem;
 }
 
@@ -40,7 +40,7 @@ h1 {
     display: flex;
     gap: 0.5rem;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #0909f6;
     overflow-x: auto;
 }
 
@@ -53,7 +53,7 @@ h1 {
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    color: #666;
+    color: #10ec0c;
     transition: all 0.3s;
     display: flex;
     align-items: center;
@@ -63,14 +63,14 @@ h1 {
 }
 
 .tab-btn:hover {
-    color: #667eea;
+    color: #e01207;
     background: rgba(102, 126, 234, 0.05);
 }
 
 .tab-btn.active {
-    color: #667eea;
-    border-bottom-color: #667eea;
-    background: rgba(102, 126, 234, 0.1);
+    color: #1b39bf;
+    border-bottom-color: #0e0e0e;
+    background: rgba(38, 190, 228, 0.1);
 }
 
 .tab-btn .icon {
@@ -109,7 +109,7 @@ h1 {
 }
 
 .tab-content p {
-    color: #666;
+    color: #090909;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -125,7 +125,7 @@ h1 {
 .feature {
     text-align: center;
     padding: 1.5rem;
-    background: #f8f9fa;
+    background: #4390dd8f;
     border-radius: 10px;
     transition: transform 0.3s;
 }
@@ -141,7 +141,7 @@ h1 {
 }
 
 .feature h3 {
-    color: #667eea;
+    color: #0025c9;
     margin-bottom: 0.5rem;
 }
 
@@ -161,7 +161,7 @@ h1 {
     margin-bottom: 0.8rem;
     background: #f8f9fa;
     border-radius: 8px;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #1037e3;
     font-size: 1.05rem;
     transition: transform 0.3s;
 }
@@ -180,12 +180,12 @@ h1 {
 }
 
 .stat-card {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #1030bc 0%, #3015ca 100%);
+    color: rgb(15, 14, 14);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px rgba(28, 240, 39, 0.956);
 }
 
 .stat-number {
@@ -212,7 +212,7 @@ h1 {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #070707;
     font-weight: 600;
 }
 
@@ -230,14 +230,14 @@ h1 {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #0e39f9;
 }
 
 .cta-btn {
     width: 100%;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #103af7 0%, #5e219b 100%);
+    color: rgb(9, 9, 9);
     border: none;
     border-radius: 10px;
     font-size: 1.1rem;
@@ -248,16 +248,16 @@ h1 {
 
 .cta-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 20px rgb(53, 226, 85);
 }
 
 .keyboard-hint {
     text-align: center;
     margin-top: 2rem;
     padding: 1rem;
-    background: #f8f9fa;
+    background: #0c0c0c;
     border-radius: 8px;
-    color: #666;
+    color: #ffffff;
     font-size: 0.9rem;
 }
 
@@ -279,4 +279,43 @@ h1 {
     .stats-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+
+
+
+.stat-card {
+    position: relative;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Oscurece la imagen para que el texto se lea */
+.stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Texto encima */
+.stat-card * {
+    position: relative;
+    z-index: 1;
+}
+
+/* IMÁGENES POR CATEGORÍA */
+.cat-150 {
+    background-image: url("https://motocrossactionmag.com/wp-content/uploads/2023/01/DT-6F5A5119.jpg");
+}
+
+.cat-200 {
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/10/21/dirt-bike-1868996_640.jpg");
+}
+
+.cat-300 {
+    background-image: url("https://vision360-s3.cdn.net.ar/s3i233/2025/01/vision360/images/01/52/09/1520984_f1fb1ee782ea39a627fe78d8f7bac36c643fb86c8172fb56d8898497eb682c27/md.webp");
 }

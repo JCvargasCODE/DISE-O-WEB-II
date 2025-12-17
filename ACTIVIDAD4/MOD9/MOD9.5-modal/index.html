@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal Dialog</title>
+    <title>Torneo de Carreras de Motos JC</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="page-container">
         <header class="header">
-            <h1>🪟 Modal Dialog con JavaScript</h1>
-            <p>Ejemplo de ventanas emergentes dinámicas</p>
+            <h1>🏁 Torneo de JUAN CARLOS Carreras de Motos – Modales</h1>
+            <p>Ejemplos de ventanas emergentes para pilotos</p>
         </header>
 
         <main class="content">
@@ -20,22 +20,22 @@
             </section>
 
             <section class="demo-buttons">
-                <h3>Ejemplos de Modales</h3>
+                <h3>Opciones del Torneo</h3>
                 
                 <button class="btn btn-primary" data-modal="modal1">
-                    📝 Abrir Formulario
+                    📝 INSCRIPCION DEL PILOTO
                 </button>
                 
                 <button class="btn btn-success" data-modal="modal2">
-                    ✅ Confirmación
+                    ✅ CONFIRMAR PARTICIPACION
                 </button>
                 
                 <button class="btn btn-info" data-modal="modal3">
-                    ℹ️ Información
+                    ℹ️ INFORMACION DEL EVENTO
                 </button>
                 
                 <button class="btn btn-warning" data-modal="modal4">
-                    🖼️ Galería de Imágenes
+                    🖼️ GALERIA DE CARRERAS
                 </button>
             </section>
 
@@ -64,26 +64,26 @@
         </main>
     </div>
 
-    <!-- Modal 1: Formulario -->
+    <!-- Modal 1: Inscripción de Piloto -->
     <div class="modal" id="modal1">
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <button class="modal-close">×</button>
-            <h2>Formulario de Contacto</h2>
+            <h2>Formulario de Inscripción</h2>
             <form class="modal-form">
                 <div class="form-group">
-                    <label>Nombre:</label>
-                    <input type="text" placeholder="Tu nombre">
+                    <label>Nombre del Piloto:</label>
+                    <input type="text" placeholder="Nombre completo">
                 </div>
                 <div class="form-group">
-                    <label>Email:</label>
-                    <input type="email" placeholder="tu@email.com">
+                    <label>Email de Contacto:</label>
+                    <input type="email" placeholder="correo@ejemplo.com">
                 </div>
                 <div class="form-group">
-                    <label>Mensaje:</label>
-                    <textarea rows="4" placeholder="Escribe tu mensaje..."></textarea>
+                    <label>Categoría:</label>
+                    <input type="text" placeholder="150cc / 200cc / 300cc+">
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Inscribirme</button>
             </form>
         </div>
     </div>
@@ -94,8 +94,8 @@
         <div class="modal-content modal-small">
             <button class="modal-close">×</button>
             <div class="modal-icon success">✓</div>
-            <h2>¿Confirmar Acción?</h2>
-            <p>Esta acción no se puede deshacer. ¿Estás seguro?</p>
+            <h2>Confirmar Participación</h2>
+            <p>¿Deseas inscribirte en el torneo? Esta acción no se puede deshacer.</p>
             <div class="modal-actions">
                 <button class="btn btn-secondary cancel-btn">Cancelar</button>
                 <button class="btn btn-success">Confirmar</button>
@@ -103,42 +103,37 @@
         </div>
     </div>
 
-    <!-- Modal 3: Información -->
+    <!-- Modal 3: Información del Torneo -->
     <div class="modal" id="modal3">
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <button class="modal-close">×</button>
             <div class="modal-icon info">ℹ️</div>
-            <h2>Información Importante</h2>
-            <p>Los modales son útiles para:</p>
+            <h2>Información del Torneo</h2>
             <ul>
-                <li>Solicitar información al usuario</li>
-                <li>Mostrar mensajes importantes</li>
-                <li>Confirmaciones de acciones</li>
-                <li>Mostrar galerías de imágenes</li>
-                <li>Formularios emergentes</li>
-            </ul>
-            <p><strong>Características de este modal:</strong></p>
-            <ul>
-                <li>✅ Cerrar haciendo clic fuera</li>
-                <li>✅ Cerrar con tecla ESC</li>
-                <li>✅ Previene scroll del fondo</li>
-                <li>✅ Animaciones suaves</li>
+                <li>Fecha y lugar del evento</li>
+                <li>Reglamento oficial</li>
+                <li>Premios para los ganadores</li>
+                <li>Categorías disponibles: 150cc, 200cc, 300cc+</li>
             </ul>
         </div>
     </div>
 
-    <!-- Modal 4: Galería -->
+    <!-- Modal 4: Galería de Carreras -->
     <div class="modal" id="modal4">
         <div class="modal-overlay"></div>
         <div class="modal-content modal-large">
             <button class="modal-close">×</button>
-            <h2>Galería de Imágenes</h2>
+            <h2>Galería de Carreras</h2>
             <div class="gallery">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" alt="Montaña">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400" alt="Bosque">
-                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=400" alt="Playa">
-                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400" alt="Ciudad">
+                <img src="https://press.ktm.com/Content/906646/6a8e3504-c12f-493e-87a2-c7ece044ebd0/1200/2400/.jpg" alt="Carrera 1">
+                <img src="https://motocrossactionmag.com/wp-content/uploads/2025/10/2025_MOTOCROSS-DES-NATIONS-IRONMAN_FIM_MXA_TRN-10373.jpg" alt="Carrera 2">
+                <img src="https://cdn-0.motocrossactionmag.com/wp-content/uploads/2024/08/2025-KTM-450SXF-ACTION-jump-28.jpg" alt="Carrera 3">
+                <img src="https://lh4.googleusercontent.com/proxy/q6imhhiZ96sOHrN0LQJbZtKUXdELWFTXHTa8ci9rX61s2t5emKdxFoagC10GQdAfyrGiXnkRzB1vxWGjN4pKUZEoSkMW4wYI66wL" alt="Carrera 4">
+                <img src="https://www.crossprensa.com.ar/news/wp-content/uploads/2025/05/jett-lawrence-wins-pala-2025.jpg" alt="Carrera 5">
+                <img src="https://soymotero.net/wp-content/uploads/2024/04/Motocross-KTM-SX-and-SX-F-2025-3.jpg" alt="Carrera 6">
+                <img src="https://s7g10.scene7.com/is/image/ktm/Husqvarna-Motorsport-Motocross-Supercross-2025-gallery02-Banner?wid=1000&hei=417&dpr=off" alt="Carrera 7">
+                <img src="https://www.royalenfieldcordoba.com.ar/wp-content/uploads/2025/03/Fedecam-109-scaled.jpg" alt="Carrera 8">
             </div>
         </div>
     </div>
