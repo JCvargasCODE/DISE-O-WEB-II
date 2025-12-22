@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa: Holy Grail Layout Elegante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="holy-grail">
+        
+        <header class="header">
+            <h1>🛍️ unique fashion store</h1>
+            <p>Descubre las últimas tendencias en moda</p>
+            
+            <div class="header-controls">
+                <div class="search-bar">
+                    <input type="text" id="input-buscador" placeholder="Buscar productos...">
+                    <button id="btn-buscar"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="cart-container" id="abrir-carrito">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+            <div class="user-actions">
+                <span id="user-email"></span>
+                <button id="btn-logout">Cerrar sesión</button>
+            </div>
+        </header>
+        
+        <nav class="nav accordion">
+           <button class="accordion-header" aria-expanded="false">
+                Categorías
+                <span class="accordion-icon">+</span>
+            </button>
+
+            <ul class="accordion-content">
+                <li><a href="#" class="btn-categoria" data-categoria="old-money">Old Money</a></li>
+                <li><a href="#" class="btn-categoria" data-categoria="urbana">Urbana</a></li>
+                <li><a href="#" class="btn-categoria" data-categoria="zapatos">Zapatos</a></li>
+                <li><a href="#" class="btn-categoria" data-categoria="accesorios">Accesorios</a></li>
+            </ul>
+        </nav>
+
+        
+        <main class="main">
+            <article>
+                <h2 id="main-title">Bienvenido a Nuestra Tienda</h2>
+                <hr>
+                <section class="product-section">
+                    <div class="product-grid" id="product-container">
+                        </div>
+                </section>
+            </article>
+        </main>
+        
+        <aside class="sidebar accordion">
+            <div class="sidebar-collections">
+                <button class="accordion-header" aria-expanded="false">
+                    Colecciones
+                    <span class="accordion-icon">+</span>
+                </button>
+                <ul class="nav-like-list accordion-content">
+                    <li><a href="#" class="btn-coleccion" data-coleccion="nuevos">Nuevos</a></li>
+                    <li><a href="#" class="btn-coleccion" data-coleccion="destacados">Destacados</a></li>
+                    <li><a href="#" class="btn-coleccion" data-coleccion="promociones">Promociones</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-contact">
+                <h3>Contacto</h3>
+                <div class="widget">
+                    <p>Envíanos un mensaje a @gmail.com</p>
+                </div>
+            </div>
+        </aside>
+        
+        <footer class="footer">
+            <p>&copy; 2024 unique fashion store. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    
+<div id="modal-confirmacion" class="modal-alert">
+    <div class="modal-alert-content">
+        <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #e74c3c; margin-bottom: 1rem;"></i>
+        <h3>¿Vaciar Carrito?</h3>
+        <p>Esta acción eliminará todos los productos seleccionados.</p>
+        <div class="modal-alert-btns">
+            <button id="confirmar-si" class="btn-confirmar">Sí, vaciar</button>
+            <button id="confirmar-no" class="btn-cancelar">Cancelar</button>
+        </div>
+    </div>
+    
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="productos.js"></script>
+    <script src="tienda-logica.js"></script>
+</body>
+</html>

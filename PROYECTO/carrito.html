@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Carrito - Unique Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="holy-grail">
+        <header class="header">
+            <h1>🛒 Mi Carrito de Compras</h1>
+            <a href="index.html" style="color: white; text-decoration: none;"><i class="fas fa-arrow-left"></i> Volver a la tienda</a>
+        </header>
+
+        <main class="main" style="grid-column: span 3;">
+            <div id="cart-container">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        </tbody>
+                </table>
+                <div class="cart-total-section">
+                    <h3>Total a pagar: <span id="cart-total">$0.00</span></h3>
+                    <button class="buy-button" onclick="alert('¡Gracias por tu compra!')">Finalizar Compra</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
