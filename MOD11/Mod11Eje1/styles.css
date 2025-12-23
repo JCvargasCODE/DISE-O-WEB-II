@@ -6,9 +6,11 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 2rem;
+    background-image: url("https://s1.significados.com/foto/paisaje-og.jpg?class=ogImageWide");
+    background-size: cover;      /* Ajusta la imagen */
+    background-position: center; /* Centrada */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -18,7 +20,7 @@ body {
 
 header {
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 3rem;
 }
 
@@ -34,20 +36,20 @@ header h1 {
 }
 
 .api-card {
-    background: white;
+    background: rgb(58, 57, 57);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .api-card h2 {
-    color: #333;
+    color: #000000;
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
 }
 
 button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0a34f3 0%, #6306bf 100%);
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -124,7 +126,7 @@ input[type="text"] {
 }
 
 .draggable {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f35df 0%, #6b0dc9 100%);
     color: white;
     padding: 1rem;
     margin-bottom: 0.5rem;

@@ -6,9 +6,11 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 100vh;
-    padding: 2rem;
+    background-image: url("https://i.pinimg.com/originals/e0/55/2a/e0552acaba3bd7e1dd7af0a9550d6d2a.jpg");
+    background-size: cover;      /* Ajusta la imagen */
+    background-position: center; /* Centrada */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
@@ -37,7 +39,7 @@ h1 {
 
 .btn {
     padding: 0.8rem 1.5rem;
-    background: white;
+    background: rgb(4, 4, 4);
     color: #667eea;
     border: none;
     border-radius: 8px;
@@ -58,7 +60,7 @@ h1 {
 }
 
 .column {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(132, 131, 132, 0.95);
     border-radius: 15px;
     padding: 1.5rem;
 }
@@ -71,7 +73,7 @@ h1 {
 
 .dropzone {
     min-height: 300px;
-    background: #f8f9fa;
+    background: #000000;
     border-radius: 10px;
     padding: 1rem;
     border: 2px dashed #e0e0e0;

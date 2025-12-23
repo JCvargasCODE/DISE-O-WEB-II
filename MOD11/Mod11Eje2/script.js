@@ -1,9 +1,8 @@
-// NOTA: Necesitas una API key de OpenWeatherMap (gratuita)
-// Registrate en: https://openweathermap.org/api
-const API_KEY = 'TU_API_KEY_AQUI'; // Reemplaza con tu API key
+// API Key de OpenWeatherMap
+const API_KEY = 'TU_API_KEY_AQUI'; // Reemplaza con tu API key real
 const API_BASE = 'https://api.openweathermap.org/data/2.5';
 
-// Estado de la aplicación
+// Estado de la app
 let currentUnit = 'metric'; // metric = Celsius, imperial = Fahrenheit
 let favorites = JSON.parse(localStorage.getItem('weatherFavorites')) || [];
 
@@ -13,7 +12,6 @@ const forecastGrid = document.getElementById('forecastGrid');
 const favoritesList = document.getElementById('favoritesList');
 const citySearch = document.getElementById('citySearch');
 const searchBtn = document.getElementById('searchBtn');
-const locationBtn = document.getElementById('locationBtn');
 const unitToggle = document.getElementById('unitToggle');
 const errorModal = document.getElementById('errorModal');
 const errorMessage = document.getElementById('errorMessage');
@@ -28,31 +26,11 @@ async function getWeatherByCity(city) {
             `${API_BASE}/weather?q=${city}&units=${currentUnit}&appid=${API_KEY}&lang=es`
         );
         
-        if (!response.ok) {
-            throw new Error('Ciudad no encontrada');
-        }
+        if (!response.ok) throw new Error('Ciudad no encontrada');
         
         const data = await response.json();
         displayCurrentWeather(data);
         getForecast(data.coord.lat, data.coord.lon);
-    } catch (error) {
-        showError(error.message);
-    }
-}
-
-/**
- * Obtener clima por coordenadas
- */
-async function getWeatherByCoords(lat, lon) {
-    try {
-        showLoading();
-        const response = await fetch(
-            `${API_BASE}/weather?lat=${lat}&lon=${lon}&units=${currentUnit}&appid=${API_KEY}&lang=es`
-        );
-        
-        const data = await response.json();
-        displayCurrentWeather(data);
-        getForecast(lat, lon);
     } catch (error) {
         showError(error.message);
     }
@@ -66,7 +44,6 @@ async function getForecast(lat, lon) {
         const response = await fetch(
             `${API_BASE}/forecast?lat=${lat}&lon=${lon}&units=${currentUnit}&appid=${API_KEY}&lang=es`
         );
-        
         const data = await response.json();
         displayForecast(data);
     } catch (error) {
@@ -78,7 +55,7 @@ async function getForecast(lat, lon) {
  * Mostrar clima actual
  */
 function displayCurrentWeather(data) {
-   const isFavorite = favorites.some(fav => fav.id === data.id);
+    const isFavorite = favorites.some(fav => fav.id === data.id);
     const unitSymbol = currentUnit === 'metric' ? '°C' : '°F';
     const speedUnit = currentUnit === 'metric' ? 'km/h' : 'mph';
     
@@ -98,22 +75,10 @@ function displayCurrentWeather(data) {
             </div>
         </div>
         <div class="weather-details">
-            <div class="detail-item">
-                <strong>Sensación térmica</strong>
-                ${Math.round(data.main.feels_like)}${unitSymbol}
-            </div>
-            <div class="detail-item">
-                <strong>Humedad</strong>
-                ${data.main.humidity}%
-            </div>
-            <div class="detail-item">
-                <strong>Viento</strong>
-                ${Math.round(data.wind.speed)} ${speedUnit}
-            </div>
-            <div class="detail-item">
-                <strong>Presión</strong>
-                ${data.main.pressure} hPa
-            </div>
+            <div class="detail-item"><strong>Sensación térmica</strong> ${Math.round(data.main.feels_like)}${unitSymbol}</div>
+            <div class="detail-item"><strong>Humedad</strong> ${data.main.humidity}%</div>
+            <div class="detail-item"><strong>Viento</strong> ${Math.round(data.wind.speed)} ${speedUnit}</div>
+            <div class="detail-item"><strong>Presión</strong> ${data.main.pressure} hPa</div>
         </div>
     `;
 }
@@ -122,7 +87,6 @@ function displayCurrentWeather(data) {
  * Mostrar pronóstico
  */
 function displayForecast(data) {
-    // Obtener un pronóstico por día (mediodía)
     const dailyForecasts = data.list.filter(item => 
         item.dt_txt.includes('12:00:00')
     ).slice(0, 5);
@@ -146,42 +110,17 @@ function displayForecast(data) {
 }
 
 /**
- * Usar geolocalización
- */
-function useGeolocation() {
-    if ('geolocation' in navigator) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                getWeatherByCoords(
-                    position.coords.latitude,
-                    position.coords.longitude
-                );
-            },
-            (error) => {
-                showError('No se pudo obtener la ubicación: ' + error.message);
-            }
-        );
-    } else {
-        showError('Geolocalización no soportada en este navegador');
-   }
-}
-
-/**
  * Alternar favorito
  */
 function toggleFavorite(id, name) {
     const index = favorites.findIndex(fav => fav.id === id);
-    
     if (index > -1) {
         favorites.splice(index, 1);
     } else {
         favorites.push({ id, name });
     }
-    
     localStorage.setItem('weatherFavorites', JSON.stringify(favorites));
     displayFavorites();
-    
-    // Recargar clima actual para actualizar botón
     getWeatherByCity(name);
 }
 
@@ -197,9 +136,7 @@ function displayFavorites() {
     favoritesList.innerHTML = favorites.map(fav => `
         <div class="favorite-item" onclick="getWeatherByCity('${fav.name}')">
             <span>${fav.name}</span>
-            <button onclick="event.stopPropagation(); toggleFavorite(${fav.id}, '${fav.name}')">
-                ✕
-            </button>
+            <button onclick="event.stopPropagation(); toggleFavorite(${fav.id}, '${fav.name}')">✕</button>
         </div>
     `).join('');
 }
@@ -211,11 +148,8 @@ function toggleUnits() {
     currentUnit = currentUnit === 'metric' ? 'imperial' : 'metric';
     unitToggle.textContent = currentUnit === 'metric' ? '°C' : '°F';
     
-    // Recargar clima si hay una ciudad buscada
     const cityName = currentWeatherDiv.querySelector('h2')?.textContent.split(',')[0];
-    if (cityName) {
-        getWeatherByCity(cityName);
-    }
+    if (cityName) getWeatherByCity(cityName);
 }
 
 /**
@@ -237,29 +171,24 @@ function showError(message) {
 // Event listeners
 searchBtn.addEventListener('click', () => {
     const city = citySearch.value.trim();
-    if (city) {
-        getWeatherByCity(city);
-    }
+    if (city) getWeatherByCity(city);
 });
 
 citySearch.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         const city = citySearch.value.trim();
-        if (city) {
-            getWeatherByCity(city);
-        }
+        if (city) getWeatherByCity(city);
     }
 });
 
-locationBtn.addEventListener('click', useGeolocation);
 unitToggle.addEventListener('click', toggleUnits);
 
 // Inicializar
 displayFavorites();
 
-// Cargar clima de una ciudad por defecto
+// Cargar clima de Santa Cruz por defecto si no hay favoritos
 if (favorites.length > 0) {
     getWeatherByCity(favorites[0].name);
 } else {
-    useGeolocation();
+    getWeatherByCity('Santa Cruz, BO'); // ciudad fija
 }
